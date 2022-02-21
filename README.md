@@ -78,12 +78,12 @@ php bin/magento cache:flush
 rm -rf pub/static/* var/view_preprocessed/*
 php bin/magento setup:static-content:deploy
 ```
-4. Go to Admin > MARKETING > Discount Limiter > Manage Settings
+4. Go to Admin > CATALOG > Store View Pricing > Manage Settings
 
 ## Live Demo:
 
-* [Backend Demo](http://m2default.mage-expo.com/admin_m2demo/?module=storepricing)
 * [Frontend Demo](http://m2default.mage-expo.com/)
+* [Backend Demo](http://m2default.mage-expo.com/admin_m2demo/?module=storepricing)
 
 ## Changelog
 
