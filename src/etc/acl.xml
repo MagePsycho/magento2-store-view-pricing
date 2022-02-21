@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category MagePsycho
+ * @package MagePsycho_StorePricing
+ * @author Raj KB <magepsycho@gmail.com>
+ * @website https://www.magepsycho.com
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <!-- Menu -->
+                <resource id="Magento_Catalog::catalog">
+                    <resource id="MagePsycho_StorePricing::menu_section" title="StorePricing Section" sortOrder="20">
+                        <resource id="MagePsycho_StorePricing::menu_config" title="Manage Settings" sortOrder="20" />
+                        <resource id="MagePsycho_StorePricing::menu_import_external" title="Import Store View Pricing" sortOrder="30" />
+                    </resource>
+                </resource>
+
+                <!-- Settings -->
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="MagePsycho_StorePricing::config" title="Store View Pricing Section" sortOrder="50" />
+                        </resource>
+                    </resource>
+                </resource>
+
+            </resource>
+        </resources>
+    </acl>
+</config>

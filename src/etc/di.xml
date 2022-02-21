@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category MagePsycho
+ * @package MagePsycho_StorePricing
+ * @author Raj KB <magepsycho@gmail.com>
+ * @website https://www.magepsycho.com
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="MagePsycho\StorePricing\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="MagePsycho\StorePricing\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">MagePsychoStorePricingLogger</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">MagePsycho\StorePricing\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Catalog\Model\Config\Source\Price\Scope">
+        <plugin name="MagePsycho_StorePricing_Plugin_Catalog_Model_Config_Source_Price_Scope"
+                type="MagePsycho\StorePricing\Plugin\Model\Catalog\Config\Source\Price\Scope" sortOrder="1" />
+    </type>
+    <preference for="Magento\Catalog\Model\Product\Attribute\Backend\Price"
+                type="MagePsycho\StorePricing\Model\Preference\Catalog\Product\Attribute\Backend\Price" />
+    <preference for="Magento\Catalog\Model\Attribute\Backend\Startdate"
+                type="MagePsycho\StorePricing\Model\Preference\Catalog\Product\Attribute\Backend\Startdate" />
+    <preference for="Magento\Eav\Model\Entity\Attribute\Backend\Datetime"
+                type="MagePsycho\StorePricing\Model\Preference\Catalog\Product\Attribute\Backend\Enddate" />
+    <preference for="Magento\Catalog\Observer\SwitchPriceAttributeScopeOnConfigChange"
+                type="MagePsycho\StorePricing\Observer\Preference\Catalog\SwitchPriceAttributeScopeOnConfigChange" />
+
+</config>

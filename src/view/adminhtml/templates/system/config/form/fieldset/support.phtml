@@ -1,0 +1,43 @@
+<div style="background:#f8f8f8; border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3; margin-bottom:10px;padding:12px 0 0 12px;">
+    <img src="https://www.magepsycho.com/_logo.svg" alt="MagePsycho" style="height: 60px;"/><br>
+    <div style="padding-left: 11px; font-size: 1.3rem;">
+        <p>
+            <strong style="color:#EA7601;">
+                <?= /* @noEscape */ $block->getExtensionName() ?> v<?= /* @noEscape */ $block->getModuleVersion() ?> by
+            </strong>
+            <a target="_blank" href="https://www.magepsycho.com" title="MagePsycho Store - Free / Premium Magento Extensions,  Themes &amp; Services">
+                <strong>MagePsycho</strong>
+            </a>
+        </p>
+        <p>
+            <?= /* @noEscape */ __('Need help? See our') ?>
+            <a href="https://blog.magepsycho.com" target="_blank" title="MagePsycho Blog - Tutorials, Tips &amp; Tricks for Magento, PHP, MySQL &amp; DevOps">
+                <?= /* @noEscape */ __('Blog') ?>
+            </a>
+            <?= /* @noEscape */ __(' or contact us via') ?>
+            <a href="https://www.magepsycho.com/contact" target="_blank" title="MagePsycho Store - Contact Us"><?= /* @noEscape */ __('form') ?></a>.
+            <?= /* @noEscape */ __(' Got feedback? ') ?>
+            <a href="mailto:info@magepsycho.com?Subject=<?= $block->escapeHtml($block->getPlatform()) ?> <?= $block->escapeHtml($block->getExtensionName()) ?> <?= $block->escapeHtml($block->getModuleVersion()) ?> for <?= $block->escapeHtml($block->getMageVersion()) ?>">
+                <?= /* @noEscape */ __('Email us') ?>
+            </a>
+        </p>
+
+        <p style="padding-bottom: 10px;"><?= /* @noEscape */__('You can find more extensions in our') ?>
+            <a href="https://www.magepsycho.com/extensions/magento-2.html" target="_blank">
+                <?= /* @noEscape */ __('Store') ?>
+            </a>
+        </p>
+
+        <h4>
+            <a style="padding: 6px 30px 6px 30px;background-color:#EB5202; color:white; font-weight: bold;"
+               href="https://www.magepsycho.com/contact" title="MagePsycho Store - Contact Us" target="_blank">
+                <?= /* @noEscape */ __('Need Support? Contact us') ?>
+            </a>
+        </h4>
+    </div>
+</div>
+<style>
+    #row_magepsycho_storepricing_import_setting .section-config > .admin__collapsible-block > a::before {
+        content: '\e644' !important;
+    }
+</style>

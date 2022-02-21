@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category MagePsycho
+ * @package MagePsycho_StorePricing
+ * @author Raj KB <magepsycho@gmail.com>
+ * @website https://www.magepsycho.com
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+
+        <!-- Menu Group -->
+        <add id="MagePsycho_StorePricing::menu_section" title="Store View Pricing" module="MagePsycho_StorePricing" sortOrder="20" parent="Magento_Catalog::catalog" resource="MagePsycho_StorePricing::menu_section"/>
+
+        <!-- Child Menus -->
+        <add id="MagePsycho_StorePricing::menu_config" title="Manage Settings" module="MagePsycho_StorePricing" sortOrder="20" parent="MagePsycho_StorePricing::menu_section" action="adminhtml/system_config/edit/section/magepsycho_storepricing" resource="MagePsycho_StorePricing::menu_config" />
+        <add id="MagePsycho_StorePricing::menu_import_external" title="Import Store View Pricing" module="MagePsycho_StorePricing" sortOrder="30" parent="MagePsycho_StorePricing::menu_section" action="magepsycho_storepricing/external/import" target="_blank" resource="MagePsycho_StorePricing::menu_import_external" />
+
+    </menu>
+</config>
