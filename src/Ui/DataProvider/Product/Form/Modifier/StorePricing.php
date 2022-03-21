@@ -32,7 +32,7 @@ class StorePricing extends AbstractModifier
      *
      * @var array
      */
-    protected $components = [
+    private $components = [
         'product-details' => [
             'container_price' => 'price'
         ],
@@ -65,10 +65,11 @@ class StorePricing extends AbstractModifier
     public function modifyMeta(array $meta)
     {
         $scopeLabel = $this->getPriceScopeLabel();
-        foreach($this->components as $metakey => $data){
-            foreach($data as $container => $attribute){
-                if(isset($meta[$metakey]["children"][$container]["children"][$attribute])){
-                    $meta[$metakey]["children"][$container]["children"][$attribute]["arguments"]["data"]["config"]["scopeLabel"] = $scopeLabel;
+        foreach ($this->components as $key => $data) {
+            foreach ($data as $container => $attribute) {
+                if (isset($meta[$key]["children"][$container]["children"][$attribute])) {
+                    $meta[$key]["children"][$container]["children"][$attribute]
+                    ["arguments"]["data"]["config"]["scopeLabel"] = $scopeLabel;
                 }
             }
         }
