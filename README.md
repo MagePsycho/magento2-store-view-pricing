@@ -87,6 +87,10 @@ php bin/magento setup:static-content:deploy
 
 ## Changelog
 
+**Version 1.0.1 (2022-03-21)**
+
+* Fix of error in 2.4.3-p1: The "componentType" configuration parameter is required for the "container_msrp" component.
+
 **Version 1.0.0 (2022-01-19)**
 
 * Initial Release.
@@ -96,7 +100,7 @@ php bin/magento setup:static-content:deploy
 
 ## Contributors
 
-![Contributors](https://contrib.rocks/image?repo=MagePsycho/magento2-store-view-pricing)
+![Contributors](https://contrib.rocks/image?repo=magepsycho/magento2-store-view-pricing)
 
 ## To Contribute
 Any contribution to the development of `Magento 2 Store View Pricing` is highly welcome.  
